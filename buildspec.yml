@@ -1,0 +1,9 @@
+version: 0.2
+phases:
+  build:
+    commands:
+      - aws deploy push --application-name h4b-app --s3-location s3://cicd-20240825-artifact/artifact.zip --source src
+artifacts:
+  files:
+    - '**/*'
+  base-direcotry: src
